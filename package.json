@@ -1,10 +1,11 @@
 {
-  "name": "projeto-cotacao",
+  "name": "currency-quotation-api",
   "version": "1.0.0",
-  "description": "",
-  "main": "main.py",
+  "description": "A Python project for fetching currency quotation data",
   "scripts": {
-    "test": "pytest",
+    "install": "pip install -r requirements.txt",
+    "test": "pytest test/",
+    "build": "echo 'No build step required for this Python project'",
     "precommit": "./pre-commit.sh",
     "start": "nodemon --watch '*.py' --exec './noderun.sh'"
   },
