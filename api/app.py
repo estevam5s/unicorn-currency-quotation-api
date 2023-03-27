@@ -22,6 +22,7 @@ user_roles = db.Table("user_roles",
     db.Column("role_id", db.Integer(), db.ForeignKey("role.id", ondelete="CASCADE"))
 )
 
+
 # Definição do modelo de usuário
 class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
