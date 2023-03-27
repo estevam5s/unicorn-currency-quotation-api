@@ -1,0 +1,57 @@
+# Arquivo .gitignore
+
+# Ambiente virtual
+venv/
+
+# Arquivos e diretórios gerados pelo Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyc.so
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Arquivos e diretórios gerados pelo Node.js e npm
+node_modules/
+npm-debug.log
+
+# Arquivos e diretórios gerados por IDEs e editores de texto
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*.suo
+*.user
+*.bak
+*.swp
+*.swn
+*.swo
+*.log
+*.tmp
+
+# Outros arquivos e diretórios temporários
+*.tmp
+*.log
+*.bak
+.DS_Store
+
+# ...
+.env
+# ...
+
+# Log files
+log/
+
+# Docker
+*.dockerignore
+
+# Husky
+.husky/_/
+node_modules/
+
+# Misc
+*.swp
+*.swo
