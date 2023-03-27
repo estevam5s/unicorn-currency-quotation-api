@@ -1,0 +1,14 @@
+[Default]
+bears = SpaceConsistencyBear, PyUnusedCodeBear, PEP8Bear
+files = **/*.py
+ignore = .venv/**, **/__pycache__/**
+
+[Python]
+language = Python
+bears = PyImportSortBear
+files = **/*.py
+ignore = .venv/**, **/__pycache__/**
+
+[Markdown]
+bears = MarkdownBear
+files = **/*.md
