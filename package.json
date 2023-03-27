@@ -1,0 +1,23 @@
+{
+  "name": "projeto-cotacao",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.py",
+  "scripts": {
+    "test": "pytest",
+    "precommit": "./pre-commit.sh",
+    "start": "nodemon --watch '*.py' --exec './noderun.sh'"
+  },
+  "keywords": [],
+  "husky": {
+    "hooks": {
+      "pre-commit": "COMMAND"
+    }
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "husky": "^7.0.2",
+    "nodemon": "^2.0.15"
+  }
+}
