@@ -1,0 +1,14 @@
+language: python
+python:
+  - "3.9"
+
+# Cache the pip directory for faster builds
+cache: pip
+
+# Install dependencies
+install:
+  - pip install -r requirements.txt
+
+# Run the tests
+script:
+  - pytest test/
