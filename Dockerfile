@@ -1,23 +1,25 @@
-# Utilize a imagem oficial do Python como base
-FROM python:3.9-slim
+# For more information, please refer to https://aka.ms/vscode-docker-python
+FROM python:3.10-slim
 
-# Defina a variável de ambiente para garantir que o stdout e o stderr estejam disponíveis
+EXPOSE 5002
+
+# Keeps Python from generating .pyc files in the container
+ENV PYTHONDONTWRITEBYTECODE=1
+
+# Turns off buffering for easier container logging
 ENV PYTHONUNBUFFERED=1
 
-# Crie e defina o diretório de trabalho
-WORKDIR /app
-
-# Copie o arquivo requirements.txt para o diretório de trabalho
+# Install pip requirements
 COPY requirements.txt .
+RUN python -m pip install -r requirements.txt
 
-# Instale as dependências do projeto
-RUN pip install --no-cache-dir -r requirements.txt
+WORKDIR /app
+COPY . /app
 
-# Copie o restante do código para o diretório de trabalho
-COPY src/ .
+# Creates a non-root user with an explicit UID and adds permission to access the /app folder
+# For more info, please refer to https://aka.ms/vscode-docker-python-configure-containers
+RUN adduser -u 5678 --disabled-password --gecos "" appuser && chown -R appuser /app
+USER appuser
 
-# Expõe a porta em que a aplicação será executada
-EXPOSE 5000
-
-# Execute a aplicação
-CMD ["python", "app.py"]
+# During debugging, this entry point will be overridden. For more information, please refer to https://aka.ms/vscode-docker-python-debug
+CMD ["gunicorn", "--bind", "0.0.0.0:5002", "venv.lib\python3.9\site-packages\_virtualenv:app"]
