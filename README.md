@@ -107,6 +107,7 @@ Para isolar as dependências do projeto, é recomendado utilizar um ambiente vir
 ```bash
 python3 -m venv venv
 source venv/bin/activate
+```
 
 Instale as dependências do projeto executando o seguinte comando:
 
