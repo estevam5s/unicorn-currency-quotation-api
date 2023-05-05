@@ -13,8 +13,3 @@ lfx_crowdfunding: # Replace with a single LFX Crowdfunding project-name e.g., cl
 custom: # Replace with up to 4 custom sponsorship URLs e.g., ['link1', 'link2']
 
 github: [estevam5s]
-patreon: estevamsouza
-issuehunt: estevam5s
-ko_fi: issuehunt.io/u/estevam5s
-# https://issuehunt.io/u/estevam5s
-custom: ["https://www.linkedin.com/in/estevam-souza", "https://twitter.com/estevamSouza199", "https://github.com/estevam5s"]
